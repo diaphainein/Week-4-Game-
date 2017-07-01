@@ -15,7 +15,7 @@ var crystalGame = {
   // This will generate a random number for the user
   generateRandomNumber: function(min, max) {
     this.randomNumber = this.getRandomNumber(19,120);
-    $("#randomNumber").html(this.randomNumber);
+    $("#randomNumber").text(this.randomNumber);
   },
     getRandomNumber: function(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
@@ -48,8 +48,8 @@ var crystalGame = {
     else {
       this.losses++;
     }
-    $("#wins").html(this.wins);
-    $("#losses").html(this.losses);
+    $("#wins").text(this.wins);
+    $("#losses").text(this.losses);
     this.generateRandomNumber();
     this.generateGemValues();
     this.score = 0;
